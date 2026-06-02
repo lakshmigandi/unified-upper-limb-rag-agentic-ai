@@ -252,7 +252,7 @@ graph = graph_builder.compile(checkpointer=memory)
 def healthcare_suite_router(user_query):
     query = user_query.lower()
     if "book" in query:
-        return "Please provide a patient name and a resource ID to finalize booking parameters."
+        return "Resource booking functionality is currently under development."
     elif "available" in query or "availability" in query:
         return check_availability_tool.invoke({})
     elif any(x in query for x in ["motion analysis", "physiotherapy", "rehabilitation lab", "resource"]):
